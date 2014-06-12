@@ -1,3 +1,5 @@
+require "tmpdir"
+
 class Heroku::Command::Mongo < Heroku::Command::Base
   # mongo:pull
   #
