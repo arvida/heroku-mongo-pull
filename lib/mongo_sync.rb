@@ -36,6 +36,7 @@ class Heroku::Command::Mongo < Heroku::Command::Base
     restore_commad << "--username #{to.user}" if to.user
     restore_commad << "--password #{to.password}" if to.password
     restore_commad << "--db #{to_db}"
+    restore_commad << "--drop"
     restore_commad << "#{dir}/#{from_db}"
 
     system restore_commad.join(" ")
