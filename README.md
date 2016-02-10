@@ -1,11 +1,11 @@
 heroku-mongo-pull
 =================
 
-Pull a Mongodb database used by your Heroku app to localhost using mongodump / mongorestore.
+Pull a Mongodb database used by your Heroku app to localhost using `mongodump` / `mongorestore` commands.
 
 ## Install
 
-    $ heroku plugins:install https://github.com/arvida/heroku-mongo-pull.git
+    $ heroku plugins:install heroku-mongo-pull
   
 ## Usage
 
