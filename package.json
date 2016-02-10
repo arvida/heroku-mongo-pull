@@ -1,6 +1,6 @@
 {
   "name": "heroku-mongo-pull",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Heroku plugin to pull a MongoDB database used by your Heroku app to localhost using mongodump / mongorestore",
   "main": "index.js",
   "author": "Arvid Andersson @arvid_a",
