@@ -24,8 +24,11 @@ function* pull (context, heroku) {
 
   restoreCommand.push('--drop');
   restoreCommand.push(path.join(dumpDir, source.dbName));
-  child_process.execSync(restoreCommand.join(' '), { stdio: [0, 1, 2] });
+  if (context.flags.noIndexRestore) {
+    restoreCommand.push("--noIndexRestore");
+  }
 
+  child_process.execSync(restoreCommand.join(' '), { stdio: [0, 1, 2] });
   child_process.execSync('rm -r ' + dumpDir, { stdio: [0, 1, 2] }); // `fs.rmdir` cannot delete non empty folders
 }
 
@@ -75,5 +78,8 @@ module.exports = {
   help: '',
   needsApp: true,
   needsAuth: true,
+  flags: [
+    { name: 'noIndexRestore', description: 'skip index restore' }
+  ],
   run: cli.command(co.wrap(pull))
 };

@@ -2,7 +2,7 @@
 
 exports.topic = {
   name: 'mongo',
-  description: 'Pull a MongoDB database used by your Heroku app to localhost'
+  description: 'Pull a MongoDB database used by your Heroku app to localhost',
 };
 
 exports.commands = [
