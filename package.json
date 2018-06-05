@@ -16,5 +16,8 @@
     "co": "4.6.0",
     "heroku-cli-util": "5.8.0",
     "mongodb-url": "1.0.3"
-  }
+  },
+  "files": [
+    "index.js"
+  ]
 }
